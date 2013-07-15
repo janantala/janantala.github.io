@@ -19,37 +19,42 @@
       font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
     }
 
-    .header {
+    .title {
       font-weight: normal;
       text-align: center;
+    }
+
+    .header {
+      color: rgb(0,0,0);
     }
 
     .profile {
       display: block;
       text-align: center;
+      text-decoration: none;
+    }
+
+    .profile-email:hover ~ .title .header-hello, .profile-email:hover ~ .title .header-at, .profile-email:hover ~ .title .header-janantala, .profile-email:hover ~ .title .header-dot, .profile-email:hover ~ .title .header-com, .profile-twitter:hover ~ .title .header-at, .profile-twitter:hover ~ .title .header-janantala, .profile-github:hover ~ .title .header-janantala, .profile-linkedin:hover ~ .title .header-janantala {
+      color: blue;
     }
   </style>
 
 </head>
 <body>
 
-<section>
-  <h1 class="header">
-    <span class="header-hello">hello</span>
-    <span class="header-at">@</span>
-    <span class="header-janantala">janantala</span>
-    <span class="header-dot">.</span>
-    <span class="header-com">com</span>
-  </h1>
-</section>
+<section class="container">
+  <a class="profile profile-email" href="mailto://hello@janantala.com">email</a>
+  <a class="profile profile-twitter" href="http://twitter.com/janantala" target="_blank">twitter</a>
+  <a class="profile profile-github" href="http://github.com/janantala" target="_blank">github</a>
+  <a class="profile profile-linkedin" href="http://linkedin.com/in/janantala" target="_blank">linkedin</a>
 
-<section>
-  <nav>
-    <a class="profile prifile-email" href="mailto://hello@janantala.com">email</a>
-    <a class="profile prifile-twitter" href="http://twitter.com/janantala" target="_blank">twitter</a>
-    <a class="profile prifile-github" href="http://github.com/janantala" target="_blank">github</a>
-    <a class="profile prifile-linkedin" href="http://linkedin.com/in/janantala" target="_blank">linkedin</a>
-  </nav>
+  <h1 class="title">
+    <span class="header header-hello">hello</span>
+    <span class="header header-at">@</span>
+    <span class="header header-janantala">janantala</span>
+    <span class="header header-dot">.</span>
+    <span class="header header-com">com</span>
+  </h1>
 </section>
 
 </body>
