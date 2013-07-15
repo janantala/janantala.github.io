@@ -5,45 +5,50 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Jan Antala</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+    }
+
+    .header {
+      font-weight: normal;
+      text-align: center;
+    }
+
+    .profile {
+      display: block;
+      text-align: center;
+    }
+  </style>
+
 </head>
 <body>
 
 <section>
-  <h1>
-    <span>
-      hello
-    </span>
-    <span>
-      @
-    </span>
-    <span>
-      janantala
-    </span>
-    <span>
-      .
-    </span>
-    <span>
-      com
-    </span>
+  <h1 class="header">
+    <span class="header-hello">hello</span>
+    <span class="header-at">@</span>
+    <span class="header-janantala">janantala</span>
+    <span class="header-dot">.</span>
+    <span class="header-com">com</span>
   </h1>
 </section>
 
 <section>
   <nav>
-    <ul>
-      <li>
-        <a href="mailto://hello@janantala.com">email</a>
-      </li>
-      <li>
-        <a href="http://twitter.com/janantala" target="_blank">twitter</a>
-      </li>
-      <li>
-        <a href="http://github.com/janantala" target="_blank">github</a>
-      </li>
-      <li>
-        <a href="http://linkedin.com/in/janantala" target="_blank">linkedin</a>
-      </li>
-    </ul>
+    <a class="profile prifile-email" href="mailto://hello@janantala.com">email</a>
+    <a class="profile prifile-twitter" href="http://twitter.com/janantala" target="_blank">twitter</a>
+    <a class="profile prifile-github" href="http://github.com/janantala" target="_blank">github</a>
+    <a class="profile prifile-linkedin" href="http://linkedin.com/in/janantala" target="_blank">linkedin</a>
   </nav>
 </section>
 
