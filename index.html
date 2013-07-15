@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Jan Antala</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/png" href="me.png">
 
   <style>
     * {
@@ -20,11 +21,11 @@
       margin: 0;
       height: 100%;
       font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+      background: rgb(238,238,238);
     }
 
     .container {
-      min-height: 700px;
-      min-height: 100vh;
+      min-height: 100%;
       width: 100%;
       position: relative;
 
@@ -71,10 +72,15 @@
 
     .title-link {
       text-decoration: none;
+      background: rgb(255,255,255);
+
+      border-radius: 5px;
+      padding: 10px;
     }
 
-    @media screen and (min-width: 320px) { .title-link { padding: 20px; } }
-    @media screen and (min-width: 700px) { .title-link { padding: 50px; } }
+    @media screen and (min-width: 200px) { .title-link { padding: 20px; } }
+    @media screen and (min-width: 300px) { .title-link { padding: 20px; border-radius: 15px; } }
+    @media screen and (min-width: 700px) { .title-link { padding: 50px; border-radius: 25px; } }
 
     .header {
       color: rgb(179,179,179);
