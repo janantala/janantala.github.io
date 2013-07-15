@@ -46,10 +46,10 @@
       top: 50%;
       left: 0;
       width: 100%;
-      height: 150px;
-      line-height: 150px;
+      height: 200px;
+      line-height: 200px;
       margin: 0;
-      margin-top: -75px;
+      margin-top: -100px;
 
       font-weight: normal;
       text-align: center;
@@ -71,6 +71,9 @@
     .title-link {
       text-decoration: none;
     }
+
+    @media screen and (min-width: 320px) { .title-link { padding: 20px; } }
+    @media screen and (min-width: 700px) { .title-link { padding: 50px; } }
 
     .header {
       color: rgb(179,179,179);
@@ -95,20 +98,34 @@
       border-bottom: 1px solid rgb(228,228,228);
       color: rgb(135,184,235);
 
-      height: 60px;
-      line-height: 60px;
+      font-size: 10px;
+      height: 40px;
+      line-height: 40px;
 
+      widht: 20%;
       -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
       -moz-box-flex: 1;         /* OLD - Firefox 19- */
       -webkit-flex: 1;          /* Chrome */
       -ms-flex: 1;              /* IE 10 */
       flex: 1;
 
+      -moz-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
       -webkit-transition: color 0.25s ease-in;  
       -moz-transition: color 0.25s ease-in;  
       -o-transition: color 0.25s ease-in;  
       transition: color 0.25s ease-in;
+
+
     }
+
+    @media screen and (min-width: 300px) { .profile { font-size: 14px; height: 60px; line-height: 60px; } }
+    @media screen and (min-width: 400px) { .profile { font-size: 16px; height: 60px; line-height: 60px; } }
+    @media screen and (min-width: 700px) { .profile { font-size: 20px; height: 60px; line-height: 60px; } }
+    @media screen and (min-width: 1000px) { .profile { font-size: 24px; height: 80px; line-height: 80px; } }
 
     .profile:hover {
       color: rgb(20,20,20);
@@ -135,7 +152,7 @@
 
 <section class="container">
   <a class="profile profile-email" href="mailto:hello@janantala.com">E-mail</a>
-  <a class="profile profile-web" href="http://janantala.com" target="_blank">Web</a>
+  <a class="profile profile-web" href="http://janantala.com">Web</a>
   <a class="profile profile-twitter" href="http://twitter.com/janantala" target="_blank">Twitter</a>
   <a class="profile profile-github" href="http://github.com/janantala" target="_blank">GitHub</a>
   <a class="profile profile-linkedin" href="http://linkedin.com/in/janantala" target="_blank">LinkedIn</a>
