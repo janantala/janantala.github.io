@@ -37,7 +37,9 @@
     @media screen and (min-width: 1600px) { .title { font-size: 92px; } }
     @media screen and (min-width: 1900px) { .title { font-size: 100px; } }
 
-
+    .title-link {
+      text-decoration: none;
+    }
 
     .header {
       color: rgb(179,179,179);
@@ -75,13 +77,17 @@
   <a class="profile profile-github" href="http://github.com/janantala" target="_blank">github</a>
   <a class="profile profile-linkedin" href="http://linkedin.com/in/janantala" target="_blank">linkedin</a>
 
+  
   <h1 class="title">
-    <span class="header header-hello">hello</span>
-    <span class="header header-at">@</span>
-    <span class="header header-janantala">janantala</span>
-    <span class="header header-dot">.</span>
-    <span class="header header-com">com</span>
+    <a class="title-link" href="mailto://hello@janantala.com">
+      <span class="header header-hello">hello</span>
+      <span class="header header-at">@</span>
+      <span class="header header-janantala">janantala</span>
+      <span class="header header-dot">.</span>
+      <span class="header header-com">com</span>
+    </a>
   </h1>
+  
 </section>
 
 </body>
