@@ -48,6 +48,9 @@
       -moz-transition: color 0.25s ease-in;  
       -o-transition: color 0.25s ease-in;  
       transition: color 0.25s ease-in;
+
+      animation: blink 2s;
+      -webkit-animation: blink 2s;
     }
 
     .profile {
@@ -64,6 +67,16 @@
     .title:hover .header-hello, .title:hover .header-at, .title:hover .header-janantala, .title:hover .header-dot, .title:hover .header-com,
     .profile-email:hover ~ .title .header-hello, .profile-email:hover ~ .title .header-at, .profile-email:hover ~ .title .header-janantala, .profile-email:hover ~ .title .header-dot, .profile-email:hover ~ .title .header-com, .profile-twitter:hover ~ .title .header-at, .profile-web:hover ~ .title .header-janantala, .profile-web:hover ~ .title .header-dot, .profile-web:hover ~ .title .header-com, .profile-twitter:hover ~ .title .header-janantala, .profile-github:hover ~ .title .header-janantala, .profile-linkedin:hover ~ .title .header-janantala {
       color: rgb(59,164,255);
+    }
+
+    @keyframes blink {
+      from { color: rgb(59,164,255); }
+      to { color: rgb(179,179,179); }
+    }
+
+    @-webkit-keyframes blink {
+      from { color: rgb(59,164,255); }
+      to { color: rgb(179,179,179); }
     }
   </style>
 
