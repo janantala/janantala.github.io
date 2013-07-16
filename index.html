@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="description" content="Frontend developer • Mobile strategist">
+  <meta name="keywords" content="Frontend, AngularJS, Node.js, MongoDB, MEAN stack">
+  <meta name="author" content="Jan Antala">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Jan Antala • Frontend developer • Mobile strategist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/png" href="me.png">
+
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+      background: rgb(238,238,238);
+    }
+
+    .container {
+      min-height: 100%;
+      width: 100%;
+      position: relative;
+
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+
+    .title {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      line-height: 200px;
+      margin: 0;
+      margin-top: -100px;
+
+      font-weight: normal;
+      text-align: center;
+
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: 240px) { .title { font-size: 18px; } }
+    @media screen and (min-width: 320px) { .title { font-size: 22px; } }
+    @media screen and (min-width: 400px) { .title { font-size: 28px; } }
+    @media screen and (min-width: 500px) { .title { font-size: 36px; } }
+    @media screen and (min-width: 600px) { .title { font-size: 44px; } }
+    @media screen and (min-width: 700px) { .title { font-size: 52px; } }
+    @media screen and (min-width: 1000px) { .title { font-size: 64px; } }
+    @media screen and (min-width: 1200px) { .title { font-size: 72px; } }
+    @media screen and (min-width: 1600px) { .title { font-size: 92px; } }
+    @media screen and (min-width: 1900px) { .title { font-size: 100px; } }
+
+    .title-link {
+      text-decoration: none;
+      background: rgb(255,255,255);
+
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    @media screen and (min-width: 200px) { .title-link { padding: 20px; } }
+    @media screen and (min-width: 300px) { .title-link { padding: 20px; border-radius: 15px; } }
+    @media screen and (min-width: 700px) { .title-link { padding: 50px; border-radius: 25px; } }
+
+    .header {
+      color: rgb(179,179,179);
+
+      -webkit-transition: color 0.25s ease-in;  
+      -moz-transition: color 0.25s ease-in;  
+      -o-transition: color 0.25s ease-in;  
+      transition: color 0.25s ease-in;
+
+      animation: blink 2s;
+      -webkit-animation: blink 2s;
+    }
+
+    .header-at, .header-com { margin: auto 0.5%; }
+
+    .profile {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+
+      background-color: rgb(250,250,250);
+      border-bottom: 1px solid rgb(228,228,228);
+      color: rgb(135,184,235);
+
+      font-size: 10px;
+      height: 40px;
+      line-height: 40px;
+
+      widht: 20%;
+      -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+      -moz-box-flex: 1;         /* OLD - Firefox 19- */
+      -webkit-flex: 1;          /* Chrome */
+      -ms-flex: 1;              /* IE 10 */
+      flex: 1;
+
+      -moz-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      -webkit-transition: color 0.25s ease-in;  
+      -moz-transition: color 0.25s ease-in;  
+      -o-transition: color 0.25s ease-in;  
+      transition: color 0.25s ease-in;
+
+
+    }
+
+    @media screen and (min-width: 300px) { .profile { font-size: 14px; height: 60px; line-height: 60px; } }
+    @media screen and (min-width: 400px) { .profile { font-size: 16px; height: 60px; line-height: 60px; } }
+    @media screen and (min-width: 700px) { .profile { font-size: 20px; height: 60px; line-height: 60px; } }
+    @media screen and (min-width: 1000px) { .profile { font-size: 24px; height: 80px; line-height: 80px; } }
+
+    .profile:hover {
+      color: rgb(20,20,20);
+    }
+
+    .title a:hover .header-hello, .title:hover .header-at, .title:hover .header-janantala, .title:hover .header-dot, .title:hover .header-com,
+    .profile-email:hover ~ .title .header-hello, .profile-email:hover ~ .title .header-at, .profile-email:hover ~ .title .header-janantala, .profile-email:hover ~ .title .header-dot, .profile-email:hover ~ .title .header-com, .profile-twitter:hover ~ .title .header-at, .profile-web:hover ~ .title .header-janantala, .profile-web:hover ~ .title .header-dot, .profile-web:hover ~ .title .header-com, .profile-twitter:hover ~ .title .header-janantala, .profile-github:hover ~ .title .header-janantala, .profile-linkedin:hover ~ .title .header-janantala {
+      color: rgb(59,164,255);
+    }
+
+    @keyframes blink {
+      from { color: rgb(59,164,255); }
+      to { color: rgb(179,179,179); }
+    }
+
+    @-webkit-keyframes blink {
+      from { color: rgb(59,164,255); }
+      to { color: rgb(179,179,179); }
+    }
+  </style>
+
+</head>
+<body>
+
+<section class="container">
+  <a class="profile profile-email" href="mailto:hello@janantala.com">E-mail</a>
+  <a class="profile profile-web" href="http://janantala.com">Web</a>
+  <a class="profile profile-twitter" href="http://twitter.com/janantala" target="_blank">Twitter</a>
+  <a class="profile profile-github" href="http://github.com/janantala" target="_blank">GitHub</a>
+  <a class="profile profile-linkedin" href="http://linkedin.com/in/janantala" target="_blank">LinkedIn</a>
+
+  
+  <h1 class="title">
+    <a class="title-link" href="mailto:hello@janantala.com">
+      <span class="header header-hello">hello</span><span class="header header-at">@</span><span class="header header-janantala">janantala</span><span class="header header-dot">.</span><span class="header header-com">com</span>
+    </a>
+  </h1>
+  
+</section>
+
+<script>
+  var _gaq=[['_setAccount','UA-24320708-2'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
