@@ -105,18 +105,20 @@
       text-decoration: none;
 
       background-color: rgb(250,250,250);
+      border-top: 5px solid black;
       border-bottom: 1px solid rgb(228,228,228);
-      color: rgb(135,184,235);
+      /*border-bottom: 5px rgb(250,250,250);*/
+      color: rgb(106,106,106);
 
       font-size: 10px;
       height: 40px;
-      line-height: 40px;
+      line-height: 30px;
 
       widht: 20%;
-      -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
-      -moz-box-flex: 1;         /* OLD - Firefox 19- */
-      -webkit-flex: 1;          /* Chrome */
-      -ms-flex: 1;              /* IE 10 */
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
       flex: 1;
 
       -moz-flex-wrap: wrap;
@@ -132,13 +134,33 @@
 
     }
 
-    @media screen and (min-width: 300px) { .profile { font-size: 14px; height: 60px; line-height: 60px; } }
-    @media screen and (min-width: 400px) { .profile { font-size: 16px; height: 60px; line-height: 60px; } }
-    @media screen and (min-width: 700px) { .profile { font-size: 20px; height: 60px; line-height: 60px; } }
-    @media screen and (min-width: 1000px) { .profile { font-size: 24px; height: 80px; line-height: 80px; } }
+    @media screen and (min-width: 300px) { .profile { font-size: 14px; height: 60px; line-height: 50px; } }
+    @media screen and (min-width: 400px) { .profile { font-size: 16px; height: 60px; line-height: 50px; } }
+    @media screen and (min-width: 700px) { .profile { font-size: 20px; height: 60px; line-height: 50px; } }
+    @media screen and (min-width: 1000px) { .profile { font-size: 24px; height: 80px; line-height: 70px; } }
 
     .profile:hover {
       color: rgb(20,20,20);
+    }
+
+    .profile-email {
+      border-top: 5px solid rgb(255,210,40);
+    }
+
+    .profile-web {
+      border-top: 5px solid rgb(255,150,0);
+    }
+
+    .profile-twitter {
+      border-top: 5px solid rgb(0,170,235);
+    }
+
+    .profile-github {
+      border-top: 5px solid rgb(21,20,20);
+    }
+
+    .profile-linkedin {
+      border-top: 5px solid rgb(255,60,40);
     }
 
     .title a:hover .header-hello, .title:hover .header-at, .title:hover .header-janantala, .title:hover .header-dot, .title:hover .header-com,
@@ -177,10 +199,10 @@
 </section>
 
 <script>
-  var _gaq=[['_setAccount','UA-24320708-2'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
+  // var _gaq=[['_setAccount','UA-24320708-2'],['_trackPageview']];
+  // (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  // g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  // s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
 
 </body>
