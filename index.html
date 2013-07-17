@@ -126,10 +126,10 @@
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
-      -webkit-transition: color 0.25s ease-in;  
-      -moz-transition: color 0.25s ease-in;  
-      -o-transition: color 0.25s ease-in;  
-      transition: color 0.25s ease-in;
+      -webkit-transition: all 0.25s ease-in;  
+      -moz-transition: all 0.25s ease-in;  
+      -o-transition: all 0.25s ease-in;  
+      transition: all 0.25s ease-in;
 
 
     }
@@ -163,9 +163,29 @@
       border-top: 5px solid rgb(255,60,40);
     }
 
-    .title a:hover .header-hello, .title:hover .header-at, .title:hover .header-janantala, .title:hover .header-dot, .title:hover .header-com,
-    .profile-email:hover ~ .title .header-hello, .profile-email:hover ~ .title .header-at, .profile-email:hover ~ .title .header-janantala, .profile-email:hover ~ .title .header-dot, .profile-email:hover ~ .title .header-com, .profile-twitter:hover ~ .title .header-at, .profile-web:hover ~ .title .header-janantala, .profile-web:hover ~ .title .header-dot, .profile-web:hover ~ .title .header-com, .profile-twitter:hover ~ .title .header-janantala, .profile-github:hover ~ .title .header-janantala, .profile-linkedin:hover ~ .title .header-janantala {
+    .title a:hover .header-hello, .title:hover .header-at, .title:hover .header-janantala, .title:hover .header-dot, .title:hover .header-com {
       color: rgb(59,164,255);
+    }
+
+    .profile-email:hover ~ .title .header-hello, .profile-email:hover ~ .title .header-at, .profile-email:hover ~ .title .header-janantala, .profile-email:hover ~ .title .header-dot, .profile-email:hover ~ .title .header-com {
+      color: rgb(255,210,40);
+      text-shadow: 1px 0 rgb(288,215,180);
+    } 
+
+    .profile-web:hover ~ .title .header-janantala, .profile-web:hover ~ .title .header-dot, .profile-web:hover ~ .title .header-com {
+      color: rgb(255,150,0);
+    }
+
+    .profile-twitter:hover ~ .title .header-at, .profile-twitter:hover ~ .title .header-janantala {
+      color: rgb(0,170,235);
+    } 
+
+    .profile-github:hover ~ .title .header-janantala {
+      color: rgb(21,20,20);
+    }
+
+    .profile-linkedin:hover ~ .title .header-janantala {
+      color: rgb(255,60,40);
     }
 
     @keyframes blink {
