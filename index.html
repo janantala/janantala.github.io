@@ -148,7 +148,7 @@
     }
 
     .profile-email {
-      border-top: 5px solid rgb(255,210,40);
+      border-top: 5px solid rgb(255,60,40);
     }
 
     .profile-web {
@@ -164,16 +164,16 @@
     }
 
     .profile-linkedin {
-      border-top: 5px solid rgb(255,60,40);
+      border-top: 5px solid rgb(20,130,187);
     }
 
     .title a:hover .header-hello, .title:hover .header-at, .title:hover .header-janantala, .title:hover .header-dot, .title:hover .header-com {
       color: rgb(59,164,255);
+      color: rgb(21,20,20);
     }
 
     .profile-email:hover ~ .title .header-hello, .profile-email:hover ~ .title .header-at, .profile-email:hover ~ .title .header-janantala, .profile-email:hover ~ .title .header-dot, .profile-email:hover ~ .title .header-com {
-      color: rgb(255,210,40);
-      text-shadow: 1px 0 rgb(288,215,180);
+      color: rgb(255,60,40);
     } 
 
     .profile-web:hover ~ .title .header-janantala, .profile-web:hover ~ .title .header-dot, .profile-web:hover ~ .title .header-com {
@@ -189,7 +189,7 @@
     }
 
     .profile-linkedin:hover ~ .title .header-janantala {
-      color: rgb(255,60,40);
+      color: rgb(20,130,187);
     }
 
     @keyframes blink {
@@ -203,18 +203,20 @@
     }
 
     @keyframes bgcolor {
-      0% {background: rgb(255,210,40);}
-      25% {background: rgb(255,150,0);}
-      50% {background: rgb(0,170,235);}
-      75% {background: rgb(21,20,20);}
+      0% {background: rgb(255,60,40);}
+      15% {background: rgb(0,170,235);}
+      40% {background: rgb(21,20,20);}
+      65% {background: rgb(20,130,187);}
+      90% {background: rgb(255,150,0);}
       100% {background: rgb(255,60,40);}
     }
 
     @-webkit-keyframes bgcolor {
-      0% {background: rgb(255,210,40);}
-      25% {background: rgb(255,150,0);}
-      50% {background: rgb(0,170,235);}
-      75% {background: rgb(21,20,20);}
+      0% {background: rgb(255,60,40);}
+      15% {background: rgb(0,170,235);}
+      40% {background: rgb(21,20,20);}
+      65% {background: rgb(20,130,187);}
+      90% {background: rgb(255,150,0);}
       100% {background: rgb(255,60,40);}
     }
   </style>
@@ -224,10 +226,10 @@
 
 <section class="container">
   <a class="profile profile-email" href="mailto:hello@janantala.com">E-mail</a>
-  <a class="profile profile-web" href="http://janantala.com">Web</a>
   <a class="profile profile-twitter" href="http://twitter.com/janantala" target="_blank">Twitter</a>
   <a class="profile profile-github" href="http://github.com/janantala" target="_blank">GitHub</a>
   <a class="profile profile-linkedin" href="http://linkedin.com/in/janantala" target="_blank">LinkedIn</a>
+  <a class="profile profile-web" href="http://janantala.com">Web</a>
 
   
   <h1 class="title">
