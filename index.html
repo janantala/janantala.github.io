@@ -26,6 +26,9 @@
       font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
       background: rgb(238,238,238);
       position: relative;
+
+      animation: bgcolor 20s infinite;
+      -webkit-animation: bgcolor 20s infinite;
     }
 
     .container {
@@ -197,6 +200,22 @@
     @-webkit-keyframes blink {
       from { color: rgb(59,164,255); }
       to { color: rgb(179,179,179); }
+    }
+
+    @keyframes bgcolor {
+      0% {background: rgb(255,210,40);}
+      25% {background: rgb(255,150,0);}
+      50% {background: rgb(0,170,235);}
+      75% {background: rgb(21,20,20);}
+      100% {background: rgb(255,60,40);}
+    }
+
+    @-webkit-keyframes bgcolor {
+      0% {background: rgb(255,210,40);}
+      25% {background: rgb(255,150,0);}
+      50% {background: rgb(0,170,235);}
+      75% {background: rgb(21,20,20);}
+      100% {background: rgb(255,60,40);}
     }
   </style>
 
