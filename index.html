@@ -28,8 +28,8 @@
       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAABH0lEQVQYlXWOP4uCYADGnwuRF5GjpCyi4DhEwskhDIc+gOO7u7jqJLQL7dHQJ3ARobmhwc1NHFpv8E8f4IoLxOGQW67uPLjf+Dw8Dz/cbjexrusuAKxWK/F8Pnfxjed5QlEUHH4zm80IAKRpygZBoNzzsiy5KIr6OJ1Oo/V6/QoATdM83qqqGk8mk/bbXxaLhRKG4ZhSOmoVw+Hw+b/R4XBQNU0TkWUZkWWZi+O4Tynt53kuJknSAYDL5cJIkiQDwNN9OZ/P2V6vJxBCKtu2u4PB4P14PHK+7193u92Pq+u6As/zymazUUzTJJZlSS0HwzAewsvlsi0PYDqdigAIo+t6o6oqSyl90TTtbb/fi0mSfFiWRRiG+XQcp9put50vStVc1KetWIsAAAAASUVORK5CYII=');
       position: relative;
 
-      animation: bgcolor 20s infinite;
-      -webkit-animation: bgcolor 20s infinite;
+      animation: bgcolor 30s infinite;
+      -webkit-animation: bgcolor 30s infinite;
     }
 
     .container {
@@ -111,7 +111,8 @@
 
       background-color: rgb(250,250,250);
       border-top: 5px solid black;
-      border-bottom: 1px solid rgb(228,228,228);
+      border-bottom: 3px solid rgb(228,228,228);
+      /*border-bottom: 3px solid rgb(220,75,57);*/
       /*border-bottom: 5px rgb(250,250,250);*/
       color: rgb(106,106,106);
 
@@ -192,6 +193,17 @@
       color: rgb(255,255,255);
     }
 
+    .profile-gplus {
+      border-top: 5px solid rgb(220,75,57);
+    }
+
+    .profile-gplus:hover {
+      background-color: rgb(220,75,57);
+      color: rgb(255,255,255);
+    }
+
+
+
     .title a:hover .header-hello, .title:hover .header-at, .title:hover .header-janantala, .title:hover .header-dot, .title:hover .header-com {
       color: rgb(21,20,20);
     }
@@ -216,6 +228,10 @@
       color: rgb(21,20,20);
     }
 
+    .profile-gplus:hover ~ .title .header-janantala {
+      color: rgb(21,20,20);
+    }
+
     @keyframes blink {
       from { color: rgb(59,164,255); }
       to { color: rgb(179,179,179); }
@@ -228,18 +244,20 @@
 
     @keyframes bgcolor {
       0% {background-color: rgb(255,60,40);}
-      15% {background-color: rgb(0,170,235);}
-      40% {background-color: rgb(21,20,20);}
-      65% {background-color: rgb(20,130,187);}
+      10% {background-color: rgb(0,170,235);}
+      30% {background-color: rgb(21,20,20);}
+      50% {background-color: rgb(220,75,57);}
+      70% {background-color: rgb(20,130,187);}
       90% {background-color: rgb(255,150,0);}
       100% {background-color: rgb(255,60,40);}
     }
 
     @-webkit-keyframes bgcolor {
       0% {background-color: rgb(255,60,40);}
-      15% {background-color: rgb(0,170,235);}
-      40% {background-color: rgb(21,20,20);}
-      65% {background-color: rgb(20,130,187);}
+      10% {background-color: rgb(0,170,235);}
+      30% {background-color: rgb(21,20,20);}
+      50% {background-color: rgb(220,75,57);}
+      70% {background-color: rgb(20,130,187);}
       90% {background-color: rgb(255,150,0);}
       100% {background-color: rgb(255,60,40);}
     }
@@ -252,6 +270,7 @@
   <a class="profile profile-email" href="mailto:hello@janantala.com" title="E-mail">E-mail</a>
   <a class="profile profile-twitter" href="http://twitter.com/janantala" title="Twitter">Twitter</a>
   <a class="profile profile-github" href="http://github.com/janantala" title="GitHub">GitHub</a>
+  <a class="profile profile-gplus" href="https://plus.google.com/109718894494822810911?rel=author" title="Google+">Google+</a>
   <a class="profile profile-linkedin" href="http://linkedin.com/in/janantala" title="LinkedIn">LinkedIn</a>
   <a class="profile profile-web" href="http://janantala.com" title="Web">Web</a>
 
