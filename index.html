@@ -111,9 +111,6 @@
 
       background-color: rgb(250,250,250);
       border-top: 5px solid black;
-      border-bottom: 3px solid rgb(228,228,228);
-      /*border-bottom: 3px solid rgb(220,75,57);*/
-      /*border-bottom: 5px rgb(250,250,250);*/
       color: rgb(106,106,106);
 
       font-size: 10px;
@@ -132,10 +129,10 @@
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
-      -webkit-transition: all 0.25s ease-in;  
-      -moz-transition: all 0.25s ease-in;  
-      -o-transition: all 0.25s ease-in;  
-      transition: all 0.25s ease-in;
+      -webkit-transition: color,background-color,box-shadow 0.25s ease-in;  
+      -moz-transition: color,background-color,box-shadow 0.25s ease-in;  
+      -o-transition: color,background-color,box-shadow 0.25s ease-in;  
+      transition: color,background-color,box-shadow 0.25s ease-in;
 
 
     }
@@ -147,6 +144,8 @@
 
     .profile:hover {
       color: rgb(20,20,20);
+      border-top: 0px;
+      padding-top: 5px;
     }
 
     .profile-email {
@@ -155,6 +154,8 @@
 
     .profile-email:hover {
       background-color: rgb(255,60,40);
+      color: rgb(255,255,255);
+      box-shadow: inset 0 0 1px rgb(235,40,20);
     }
 
     .profile-web {
@@ -163,7 +164,8 @@
 
     .profile-web:hover {
       background-color: rgb(255,150,0);
-      
+      color: rgb(255,255,255);
+      box-shadow: inset 0 0 1px rgb(235,130,0);
     }
 
     .profile-twitter {
@@ -173,6 +175,7 @@
     .profile-twitter:hover {
       background-color: rgb(0,170,235);
       color: rgb(255,255,255);
+      box-shadow: inset 0 0 1px rgb(0,150,215);
     }
 
     .profile-github {
@@ -182,6 +185,7 @@
     .profile-github:hover {
       background-color: rgb(21,20,20);
       color: rgb(255,255,255);
+      box-shadow: inset 0 0 1px rgb(1,0,0);
     }
 
     .profile-linkedin {
@@ -191,6 +195,7 @@
     .profile-linkedin:hover {
       background-color: rgb(20,130,187);
       color: rgb(255,255,255);
+      box-shadow: inset 0 0 1px rgb(0,110,167);
     }
 
     .profile-gplus {
@@ -200,9 +205,8 @@
     .profile-gplus:hover {
       background-color: rgb(220,75,57);
       color: rgb(255,255,255);
+      box-shadow: inset 0 0 1px rgb(200,55,37);
     }
-
-
 
     .title a:hover .header-hello, .title:hover .header-at, .title:hover .header-janantala, .title:hover .header-dot, .title:hover .header-com {
       color: rgb(21,20,20);
