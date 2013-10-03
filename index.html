@@ -24,12 +24,13 @@
       margin: 0;
       height: 100%;
       font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
-      background-color: rgb(238,238,238);
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAABH0lEQVQYlXWOP4uCYADGnwuRF5GjpCyi4DhEwskhDIc+gOO7u7jqJLQL7dHQJ3ARobmhwc1NHFpv8E8f4IoLxOGQW67uPLjf+Dw8Dz/cbjexrusuAKxWK/F8Pnfxjed5QlEUHH4zm80IAKRpygZBoNzzsiy5KIr6OJ1Oo/V6/QoATdM83qqqGk8mk/bbXxaLhRKG4ZhSOmoVw+Hw+b/R4XBQNU0TkWUZkWWZi+O4Tynt53kuJknSAYDL5cJIkiQDwNN9OZ/P2V6vJxBCKtu2u4PB4P14PHK+7193u92Pq+u6As/zymazUUzTJJZlSS0HwzAewsvlsi0PYDqdigAIo+t6o6oqSyl90TTtbb/fi0mSfFiWRRiG+XQcp9put50vStVc1KetWIsAAAAASUVORK5CYII=');
       position: relative;
 
-      animation: bgcolor 30s infinite;
-      -webkit-animation: bgcolor 30s infinite;
+      background-color: rgb(238,238,238);
+      background-image: url('glass.jpeg');
+      background-size: cover;
+      background-position: center top;
+
     }
 
     .container {
@@ -81,6 +82,7 @@
     .title-link {
       text-decoration: none;
       background: rgb(255,255,255);
+      background: rgba(255,255,255, 0.7);
       border: 1px solid rgb(21,20,20);
       border-radius: 5px;
       padding: 10px;
@@ -245,24 +247,6 @@
       to { color: rgb(179,179,179); }
     }
 
-    @keyframes bgcolor {
-      0% {background-color: rgb(255,60,40);}
-      15% {background-color: rgb(0,170,235);}
-      40% {background-color: rgb(21,20,20);}
-      65% {background-color: rgb(220,75,57);}
-      90% {background-color: rgb(20,130,187);}
-      100% {background-color: rgb(255,60,40);}
-    }
-
-    @-webkit-keyframes bgcolor {
-      0% {background-color: rgb(255,60,40);}
-      15% {background-color: rgb(0,170,235);}
-      40% {background-color: rgb(21,20,20);}
-      65% {background-color: rgb(220,75,57);}
-      90% {background-color: rgb(20,130,187);}
-      100% {background-color: rgb(255,60,40);}
-    }
-
     .link {
       position: absolute;
       bottom: 0;
@@ -289,6 +273,14 @@
       font-size: 12px;
       line-height: 18px;
       text-align: right;
+
+      background: -moz-linear-gradient(-45deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%);
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,0.5)));
+      background: -webkit-linear-gradient(-45deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%);
+      background: -o-linear-gradient(-45deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%);
+      background: -ms-linear-gradient(-45deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%);
+      background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255,255,255,0)', endColorstr='rgba(0,0,0,0.5)',GradientType=1 );
     }
 
     @media screen and (min-width: 320px) { .license { font-size: 14px; line-height: 22px; } }
@@ -298,12 +290,12 @@
 <body>
 
 <section class="container">
-  <a class="link link-web" href="http://janantala.com">
+  <div class="link link-web">
     <span class="license">
       The MIT License<br>
       Copyright (c) 2013 by Jan Antala
     </span>
-  </a>
+  </div>
 
   <a class="profile profile-email" href="mailto:hello@janantala.com" title="E-mail">E-mail</a>
   <a class="profile profile-twitter" href="http://twitter.com/janantala" title="Twitter">Twitter</a>
