@@ -90,14 +90,11 @@
       text-decoration: none;
       background: rgb(255,255,255);
       background: rgba(255,255,255, 0.5);
-      border: 1px solid rgb(21,20,20);
       border-radius: 5px;
       padding: 10px;
     }
 
     @media screen and (min-width: 200px) { .title-link { padding: 20px; } }
-    @media screen and (min-width: 300px) { .title-link { padding: 20px; border-radius: 15px; } }
-    @media screen and (min-width: 700px) { .title-link { padding: 20px; border-radius: 20px; } }
 
     .header {
       color: rgb(129,129,129);
@@ -275,16 +272,41 @@
       right: 0;
       padding: 10px;
       text-decoration: none;
-      color: rgb(255,255,255);
+      background-color: rgb(255,255,255);
+      color: rgb(129,129,129);
       font-size: 12px;
       line-height: 18px;
       text-align: right;
-
-      box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
     }
 
+    .license a {
+      color: rgb(144, 115, 192);
+      text-decoration: none;
+    }
+
+    .license a:hover {
+      text-decoration: underline;
+    }
+
+
     @media screen and (min-width: 320px) { .license { font-size: 14px; line-height: 22px; } }
+
+    .profile-text { display: none; }
+    @media screen and (min-width: 1000px) {
+      i.profile-icon { display: none; }
+      .profile-text { display: inline; }
+    }
   </style>
+
+  <script>
+    if (!window.Polymer) {
+      var script = document.createElement('script');
+      script.src = 'http://www.polymer-project.org/polymer.min.js?20131025';
+      document.head.appendChild(script);
+    }
+  </script>
+
+  <link rel="import" href="bower_components/love-heart/love-heart.html">
 
 </head>
 <body>
@@ -292,16 +314,26 @@
 <section class="container">
   <div class="link link-web">
     <span class="license">
-      The MIT License<br>
-      Copyright (c) 2013 by Jan Antala
+      Made with <love-heart></love-heart> by <a href="http://janantala.com">Jan Antala</a><br>
+      2013 Licensed under <a href="http://opensource.org/licenses/MIT">MIT</a>
     </span>
   </div>
 
-  <a class="profile profile-email" href="mailto:hello@janantala.com" title="E-mail">E-mail</a>
-  <a class="profile profile-twitter" href="http://twitter.com/janantala" title="Twitter">Twitter</a>
-  <a class="profile profile-github" href="http://github.com/janantala" title="GitHub">GitHub</a>
-  <a class="profile profile-gplus" href="https://plus.google.com/109718894494822810911?rel=author" title="Google+">Google+</a>
-  <a class="profile profile-linkedin" href="http://linkedin.com/in/janantala" title="LinkedIn">LinkedIn</a>
+  <a class="profile profile-email" href="mailto:hello@janantala.com" title="E-mail">
+    <i class="profile-icon fa fa-envelope-o"></i> <span class="profile-text">E-mail</span>
+  </a>
+  <a class="profile profile-twitter" href="http://twitter.com/janantala" title="Twitter">
+    <i class="profile-icon fa fa-twitter"></i> <span class="profile-text">Twitter</span>
+  </a>
+  <a class="profile profile-github" href="http://github.com/janantala" title="GitHub">
+    <i class="profile-icon fa fa-github"></i> <span class="profile-text">GitHub</span>
+  </a>
+  <a class="profile profile-gplus" href="https://plus.google.com/109718894494822810911?rel=author" title="Google+">
+    <i class="profile-icon fa fa-google-plus"></i> <span class="profile-text">Google+</span>
+  </a>
+  <a class="profile profile-linkedin" href="http://linkedin.com/in/janantala" title="LinkedIn">
+    <i class="profile-icon fa fa-linkedin"></i> <span class="profile-text">LinkedIn</span>
+  </a>
   
   <h1 class="title">
     <a class="title-link" href="mailto:hello@janantala.com">
@@ -310,6 +342,8 @@
   </h1>
   
 </section>
+
+<link rel="stylesheet" media="(max-width: 1000px)" href="bower_components/font-awesome/css/font-awesome.min.css">
 
 <script>
   var _gaq=[['_setAccount','UA-24320708-2'],['_trackPageview']];
