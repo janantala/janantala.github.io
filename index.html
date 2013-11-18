@@ -286,14 +286,24 @@
     @media screen and (min-width: 320px) { .license { font-size: 14px; line-height: 22px; } }
   </style>
 
+  <script>
+    if (!window.Polymer) {
+      var script = document.createElement('script');
+      script.src = 'http://www.polymer-project.org/polymer.min.js?20131025';
+      document.head.appendChild(script);
+    }
+  </script>
+
+  <link rel="import" href="bower_components/love-heart/love-heart.html">
+
 </head>
 <body>
 
 <section class="container">
   <div class="link link-web">
     <span class="license">
-      The MIT License<br>
-      Copyright (c) 2013 by Jan Antala
+      Made with <love-heart></love-heart> by <a href="http://janantala.com">Jan Antala</a><br>
+      2013 Licensed under <a href="http://opensource.org/licenses/MIT">MIT</a>
     </span>
   </div>
 
