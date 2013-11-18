@@ -290,6 +290,12 @@
 
 
     @media screen and (min-width: 320px) { .license { font-size: 14px; line-height: 22px; } }
+
+    .profile-text { display: none; }
+    @media screen and (min-width: 1000px) {
+      i.profile-icon { display: none; }
+      .profile-text { display: inline; }
+    }
   </style>
 
   <script>
@@ -313,11 +319,21 @@
     </span>
   </div>
 
-  <a class="profile profile-email" href="mailto:hello@janantala.com" title="E-mail">E-mail</a>
-  <a class="profile profile-twitter" href="http://twitter.com/janantala" title="Twitter">Twitter</a>
-  <a class="profile profile-github" href="http://github.com/janantala" title="GitHub">GitHub</a>
-  <a class="profile profile-gplus" href="https://plus.google.com/109718894494822810911?rel=author" title="Google+">Google+</a>
-  <a class="profile profile-linkedin" href="http://linkedin.com/in/janantala" title="LinkedIn">LinkedIn</a>
+  <a class="profile profile-email" href="mailto:hello@janantala.com" title="E-mail">
+    <i class="profile-icon fa fa-envelope-o"></i> <span class="profile-text">E-mail</span>
+  </a>
+  <a class="profile profile-twitter" href="http://twitter.com/janantala" title="Twitter">
+    <i class="profile-icon fa fa-twitter"></i> <span class="profile-text">Twitter</span>
+  </a>
+  <a class="profile profile-github" href="http://github.com/janantala" title="GitHub">
+    <i class="profile-icon fa fa-github"></i> <span class="profile-text">GitHub</span>
+  </a>
+  <a class="profile profile-gplus" href="https://plus.google.com/109718894494822810911?rel=author" title="Google+">
+    <i class="profile-icon fa fa-google-plus"></i> <span class="profile-text">Google+</span>
+  </a>
+  <a class="profile profile-linkedin" href="http://linkedin.com/in/janantala" title="LinkedIn">
+    <i class="profile-icon fa fa-linkedin"></i> <span class="profile-text">LinkedIn</span>
+  </a>
   
   <h1 class="title">
     <a class="title-link" href="mailto:hello@janantala.com">
@@ -326,6 +342,8 @@
   </h1>
   
 </section>
+
+<link rel="stylesheet" media="(max-width: 1000px)" href="bower_components/font-awesome/css/font-awesome.min.css">
 
 <script>
   var _gaq=[['_setAccount','UA-24320708-2'],['_trackPageview']];
