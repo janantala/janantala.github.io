@@ -1,6 +1,6 @@
 {
   "name": "love-heart",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": [
     "Jan Antala <hello@janantala.com>"
   ],
@@ -23,14 +23,14 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "v0.0.20131025"
+    "polymer": "~0.1.0"
   },
-  "_release": "0.1.0",
+  "_release": "0.1.1",
   "_resolution": {
     "type": "version",
-    "tag": "v0.1.0",
-    "commit": "90f3a4bfb05b505e1208eba8560a697d10401dcf"
+    "tag": "v0.1.1",
+    "commit": "667fabe91070f0a2e02d39119bc958afff267178"
   },
   "_source": "git://github.com/janantala/love-heart.git",
-  "_target": "~0.1.0"
+  "_target": "~0.1.1"
 }
