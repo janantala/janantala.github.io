@@ -1,4 +1,9 @@
-janantala.github.io
-===================
+# janantala.github.io
 
-janantala.com homepage
+My homepage http://www.janantala.com
+
+# License
+
+The MIT License
+
+Copyright (c) 2013 [Jan Antala](http://www.janantala.com)
