@@ -9,9 +9,9 @@
     "browser"
   ],
   "author": "Polymer Authors <polymer-dev@googlegroups.com>",
-  "version": "0.0.20131025",
-  "main": "polymer.min.js",
+  "version": "0.0.20131107",
+  "main": "polymer.js",
   "scripts": [
-    "polymer.min.js"
+    "polymer.js"
   ]
 }
