@@ -298,16 +298,8 @@
     }
   </style>
 
-  <script>
-    if (!window.Polymer) {
-      var platformScript = document.createElement('script');
-      platformScript.src = 'bower_components/platform/platform.js';
-      var polymerScript = document.createElement('script');
-      polymerScript.src = 'bower_components/polymer/polymer.js';
-      document.head.appendChild(platformScript).appendChild(polymerScript);
-    }
-  </script>
-
+  <script src="bower_components/platform/platform.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
   <link rel="import" href="bower_components/love-heart/love-heart.html">
 
 </head>
