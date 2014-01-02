@@ -213,6 +213,16 @@
       box-shadow: inset 0 0 1px rgb(200,55,37);
     }
 
+    .profile-slides {
+      border-top: 5px solid rgb(174,144,107);
+    }
+
+    .profile-slides:hover {
+      background-color: rgb(174,144,107);
+      color: rgb(255,255,255);
+      box-shadow: inset 0 0 1px rgb(200,55,37);
+    }
+
     .title a:hover .header-hello, .title:hover .header-at, .title:hover .header-janantala, .title:hover .header-dot, .title:hover .header-com {
       color: rgb(21,20,20);
     }
@@ -238,6 +248,10 @@
     }
 
     .profile-gplus:hover ~ .title .header-janantala {
+      color: rgb(21,20,20);
+    }
+
+    .profile-slides:hover ~ .title .header-janantala, .profile-slides:hover ~ .title .header-dot, .profile-slides:hover ~ .title .header-com {
       color: rgb(21,20,20);
     }
 
@@ -326,6 +340,9 @@
   </a>
   <a class="profile profile-linkedin" href="http://linkedin.com/in/janantala" title="LinkedIn">
     <i class="profile-icon fa fa-linkedin"></i> <span class="profile-text">LinkedIn</span>
+  </a>
+  <a class="profile profile-slides" href="slides" title="Talk slides">                                                                                                                 
+    <i class="profile-icon fa fa-microphone"></i> <span class="profile-text">Talk slides</span>
   </a>
   
   <h1 class="title">
