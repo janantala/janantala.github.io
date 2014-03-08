@@ -84,115 +84,9 @@
     .email-link {
       color: rgb(255,255,255);
     }
-
-    .white {
-      background: rgb(255,255,255);
-      color: rgb(0,0,0);
-      padding: 30px 10px;
-    }
-
-    .section-about {
-      text-align: justify;
-    }
-
-    .section-credits {
-      background: rgb(237,240,241);
-    }
-
-    .container {
-      width: 100%;
-      max-width: 800px;
-      padding: 20px 10px;
-      margin: 20px auto;
-    }
-
-    .credits {
-      position: relative;
-      max-width: 1600px;
-
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-
-      -webkit-box-flex: 1;
-      -moz-box-flex: 1;
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-
-      -moz-flex-wrap: wrap;
-      -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-    }
-
-    .credits-link {
-      display: block;
-      text-align: center;
-      text-decoration: none;
-
-      -webkit-box-flex: 1;
-      -moz-box-flex: 1;
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-
-      -moz-flex-wrap: wrap;
-      -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-
-      padding: 20px 0;
-      color: rgb(106,106,106);
-    }
-
-    .credits-icon {
-      line-height: 140px;
-      font-size: 70px;
-
-      -webkit-transition: color 0.25s ease-in 1s;  
-      -moz-transition: color 0.25s ease-in 1s;  
-      -o-transition: color 0.25s ease-in 1s;  
-      transition: color 0.25s ease-in 1s;
-    }
-
-    .credits-visible .credits-title {
-      line-height: 40px;
-      font-size: 16px;
-    }
-
-    .credits-visible .credits-icon-email {
-      color: rgb(174,144,107);
-    }
-
-    .credits-visible .credits-icon-github {
-      color: rgb(21,20,20);
-    }
-
-    .credits-visible .credits-icon-twitter {
-      color: rgb(0,170,235);
-    }
-
-    .credits-visible .credits-icon-google-plus {
-      color: rgb(220,75,57);
-    }
-
-    .credits-visible .credits-icon-linkedin {
-      color: rgb(20,130,187);
-    }
-
-    footer {
-      text-align: center;
-    }
-
   </style>
 
-  <script src="bower_components/platform/platform.js"></script>
-  <link rel="import" href="bower_components/polymer/polymer.html">
-  <link rel="import" href="bower_components/love-heart/love-heart.html">
-
+  <link href="http://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -230,74 +124,140 @@
 
 <h3 class="text-center">Drop me a line</h3>
 
-<section class="section-credits">
-  <div class="container credits">
-    <a class="credits-link" href="mailto:hello@janantala.com" title="E-mail">
-      <i class="credits-icon credits-icon-email fa fa-envelope-o"></i><br>
-      <span class="credits-title">E-mail</span>
+<section class="section-contact">
+  <div class="container contact">
+    <a class="contact-link" href="mailto:hello@janantala.com" title="E-mail">
+      <i class="contact-icon contact-icon-email fa fa-envelope-o"></i><br>
+      <span class="contact-title">E-mail</span>
     </a>
-    <a class="credits-link" href="http://github.com/janantala" title="GitHub" alt="GitHub">
-      <i class="credits-icon credits-icon-github fa fa-github"></i><br>
-      <span class="credits-title">GitHub</span>
+    <a class="contact-link" href="http://github.com/janantala" title="GitHub" alt="GitHub">
+      <i class="contact-icon contact-icon-github fa fa-github"></i><br>
+      <span class="contact-title">GitHub</span>
     </a>
-    <a class="credits-link" href="http://twitter.com/janantala" title="Twitter" alt="Twitter">
-      <i class="credits-icon credits-icon-twitter fa fa-twitter"></i><br>
-      <span class="credits-title">Twitter</span>
+    <a class="contact-link" href="http://twitter.com/janantala" title="Twitter" alt="Twitter">
+      <i class="contact-icon contact-icon-twitter fa fa-twitter"></i><br>
+      <span class="contact-title">Twitter</span>
     </a>
-    <a class="credits-link" href="https://plus.google.com/109718894494822810911?rel=author" title="Google+" alt="Google+">
-      <i class="credits-icon credits-icon-google-plus fa fa-google-plus"></i><br>
-      <span class="credits-title">Google+</span>
+    <a class="contact-link" href="https://plus.google.com/109718894494822810911?rel=author" title="Google+" alt="Google+">
+      <i class="contact-icon contact-icon-google-plus fa fa-google-plus"></i><br>
+      <span class="contact-title">Google+</span>
     </a>
-    <a class="credits-link" href="http://linkedin.com/in/janantala" title="LinkedIn" alt="LinkedIn">
-      <i class="credits-icon credits-icon-linkedin fa fa-linkedin"></i><br>
-      <span class="credits-title">LinkedIn</span>
+    <a class="contact-link" href="http://linkedin.com/in/janantala" title="LinkedIn" alt="LinkedIn">
+      <i class="contact-icon contact-icon-linkedin fa fa-linkedin"></i><br>
+      <span class="contact-title">LinkedIn</span>
     </a>
   </div>
 </section>
 
-<section class="section-work">
-  <div class="container">
-    <h4>Speaking</h4>
-    <ul>
-      <li>
-        <span>How To Build An Open Source AngularJS Module?</span><br>
-        <small><i>WebElement #25 feat. Slovak AngularJS #3</i></small>
-      </li>
-      <li>
-        <span>Re-Imagining User Interface</span><br>
-        <small><i>IIT.SRC 2013</i></small>
-      </li>
-    </ul>
-
-    <h4>Writing</h4>
-    <ul>
-      <li>
-        <span>Adaptive Web Design</span><br>
-        <small><i>Master Thesis (2014)</i></small>
-      </li>
-      <li>
-        <span>Beyond Adaptive Web Design</span><br>
-        <small><i>IIT.SRC 2014</i></small>
-      </li>
-      <li>
-        <span>Re-Imagining User Interface</span><br>
-        <small><i>IIT.SRC 2013</i></small>
-      </li>
-      <li>
-        <span>Creation Of Rich Internet Applications For Mobile Devices</span><br>
-        <small><i>Bachelor Thesis (2012)</i></small>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<footer>
-  Made with <love-heart>love</love-heart> by <a href="http://janantala.com" itemprop="name">Jan Antala</a>
+<footer class="credits container">
+  Made with <love-heart>love</love-heart> by <a href="http://janantala.com">Jan Antala</a>
 </footer>
 
-<link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
 <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+<style>
+  .section-about {
+    text-align: justify;
+  }
+
+  .section-contact {
+    background: rgb(237,240,241);
+  }
+
+  .container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px 10px;
+    margin: 20px auto;
+  }
+
+  .contact {
+    position: relative;
+    max-width: 1600px;
+    padding: 5px 0;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 40px 0;
+
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    color: rgb(106,106,106);
+  }
+
+  .contact-icon {
+    line-height: 80px;
+    font-size: 70px;
+
+    -webkit-transition: color 0.25s ease-in 0.5s;  
+    -moz-transition: color 0.25s ease-in 0.5s;  
+    -o-transition: color 0.25s ease-in 0.5s;  
+    transition: color 0.25s ease-in 0.5s;
+  }
+
+  .contact-visible .contact-title {
+    line-height: 30px;
+    font-size: 16px;
+  }
+
+  .contact-visible .contact-icon-email {
+    color: rgb(174,144,107);
+  }
+
+  .contact-visible .contact-icon-github {
+    color: rgb(21,20,20);
+  }
+
+  .contact-visible .contact-icon-twitter {
+    color: rgb(0,170,235);
+  }
+
+  .contact-visible .contact-icon-google-plus {
+    color: rgb(220,75,57);
+  }
+
+  .contact-visible .contact-icon-linkedin {
+    color: rgb(20,130,187);
+  }
+
+  footer {
+    text-align: center;
+  }
+</style>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.1.4/platform.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.1.4/polymer.js"></script>
+<link rel="import" href="bower_components/love-heart/love-heart.html">
 
 <script>
   var isElementInViewport = function(el) {
@@ -311,11 +271,11 @@
     );
   };
 
-  var el = document.getElementsByClassName('credits')[0];
+  var el = document.getElementsByClassName('contact')[0];
 
   var listener = function(event) {
     if(isElementInViewport(el)) {
-      el.classList.add('credits-visible');
+      el.classList.add('contact-visible');
       window.removeEventListener('scroll', listener, false);
     }
   };
