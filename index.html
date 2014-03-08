@@ -154,9 +154,43 @@
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
-      line-height: 160px;
-      font-size: 30px;
+      padding: 20px 0;
       color: rgb(106,106,106);
+    }
+
+    .credits-icon {
+      line-height: 140px;
+      font-size: 70px;
+
+      -webkit-transition: color 0.25s ease-in 1s;  
+      -moz-transition: color 0.25s ease-in 1s;  
+      -o-transition: color 0.25s ease-in 1s;  
+      transition: color 0.25s ease-in 1s;
+    }
+
+    .credits-visible .credits-title {
+      line-height: 40px;
+      font-size: 16px;
+    }
+
+    .credits-visible .credits-icon-email {
+      color: rgb(174,144,107);
+    }
+
+    .credits-visible .credits-icon-github {
+      color: rgb(21,20,20);
+    }
+
+    .credits-visible .credits-icon-twitter {
+      color: rgb(0,170,235);
+    }
+
+    .credits-visible .credits-icon-google-plus {
+      color: rgb(220,75,57);
+    }
+
+    .credits-visible .credits-icon-linkedin {
+      color: rgb(20,130,187);
     }
 
     footer {
@@ -211,19 +245,24 @@
 <section class="section-credits">
   <div class="container credits">
     <a class="credits-link" href="mailto:hello@janantala.com" title="E-mail">
-      E-mail
+      <i class="credits-icon credits-icon-email fa fa-envelope-o"></i><br>
+      <span class="credits-title">E-mail</span>
     </a>
     <a class="credits-link" href="http://github.com/janantala" title="GitHub" alt="GitHub">
-      GitHub
+      <i class="credits-icon credits-icon-github fa fa-github"></i><br>
+      <span class="credits-title">GitHub</span>
     </a>
     <a class="credits-link" href="http://twitter.com/janantala" title="Twitter" alt="Twitter">
-      Twitter
+      <i class="credits-icon credits-icon-twitter fa fa-twitter"></i><br>
+      <span class="credits-title">Twitter</span>
     </a>
     <a class="credits-link" href="https://plus.google.com/109718894494822810911?rel=author" title="Google+" alt="Google+">
-      Google+
+      <i class="credits-icon credits-icon-google-plus fa fa-google-plus"></i><br>
+      <span class="credits-title">Google+</span>
     </a>
     <a class="credits-link" href="http://linkedin.com/in/janantala" title="LinkedIn" alt="LinkedIn">
-      LinkedIn
+      <i class="credits-icon credits-icon-linkedin fa fa-linkedin"></i><br>
+      <span class="credits-title">LinkedIn</span>
     </a>
   </div>
 </section>
@@ -234,7 +273,7 @@
     <ul>
       <li>How To Build An Open-Source AngularJS Module?</li>
     </ul>
-    
+
     <h4>Writing</h4>
     <ul>
       <li>Beyond Adaptive Web Design</li>
@@ -247,9 +286,33 @@
   Made with <love-heart>love</love-heart> by <a href="http://janantala.com" itemprop="name">Jan Antala</a>
 </footer>
 
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" media="(max-width: 1000px)" href="bower_components/font-awesome/css/font-awesome.min.css">
+<link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+<script>
+  var isElementInViewport = function(el) {
+    var rect = el.getBoundingClientRect();
+
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  };
+
+  var el = document.getElementsByClassName('credits')[0];
+
+  var listener = function(event) {
+    if(isElementInViewport(el)) {
+      el.classList.add('credits-visible');
+      window.removeEventListener('scroll', listener, false);
+    }
+  };
+
+  window.addEventListener('scroll', listener, false);
+</script>
 
 <script>
   var _gaq=[['_setAccount','UA-24320708-2'],['_trackPageview']];
