@@ -67,8 +67,8 @@
       bottom: 0;
       z-index: 100;
       width: 100%;
-      height: 20%;
-      min-height: 200px;
+      height: 10%;
+      min-height: 150px;
       padding: 10px;
 
       background: rgb(20,20,20);
@@ -78,7 +78,17 @@
     }
 
     .name {
-      font-size: 50px;
+      font-size: 30px;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
+    @media screen and (min-width: 280px) { 
+      .name { font-size: 50px; } 
+      .title { font-size: 26px; } 
+      .homepage-title { height: 20%; min-height: 200px; }
     }
 
     .email-link {
@@ -199,7 +209,7 @@
     display: block;
     text-align: center;
     text-decoration: none;
-    padding: 40px 0;
+    padding: 20px 0;
 
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -216,8 +226,8 @@
   }
 
   .contact-icon {
-    line-height: 80px;
-    font-size: 70px;
+    line-height: 60px;
+    font-size: 40px;
 
     -webkit-transition: color 0.25s ease-in 0.5s;  
     -moz-transition: color 0.25s ease-in 0.5s;  
@@ -226,8 +236,18 @@
   }
 
   .contact-visible .contact-title {
-    line-height: 30px;
-    font-size: 16px;
+    line-height: 16px;
+    font-size: 10px;
+  }
+
+  @media screen and (min-width: 260px) { 
+    .contact-visible .contact-title { line-height: 20px; font-size: 14px; }
+  }
+
+  @media screen and (min-width: 720px) { 
+    .contact-icon { line-height: 80px; font-size: 70px; } 
+    .contact-link { padding: 40px 0; } 
+    .contact-visible .contact-title { line-height: 30px; font-size: 16px } 
   }
 
   .contact-visible .contact-icon-email {
