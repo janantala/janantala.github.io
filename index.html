@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="description" content="Jan Antala is a Frontend developer and Mobile strategist">
+  <meta name="description" content="Jan Antala is a Web Developer">
   <meta name="keywords" content="Frontend, AngularJS, Node.js, MongoDB, MEAN stack">
   <meta name="author" content="Jan Antala">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Jan Antala • Frontend developer • Mobile strategist</title>
+  <title>Jan Antala</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="icon" type="image/png" href="me.png">
 
@@ -23,27 +23,94 @@
       padding: 0;
       margin: 0;
       height: 100%;
-      font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+      font-family: 'Lato';
+      font-weight: 300;
+      font-size: 22px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Raleway';
+      font-weight: 300;
+      margin: .5em 0;
+      line-height: 1.1;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .homepage-header {
+      height: 100%;
       position: relative;
 
-      background-color: rgb(238,238,238);
-      background-image: url('images/glass-low.jpeg');
-      background-image: -moz-image-set(url('images/glass.jpeg') 1x, url('images/glass-high.jpeg') 2x);
+      background-color: rgb(200, 156, 124);
+      background-image: url('images/glass-high.jpeg');
+
+      /*background-image: -moz-image-set(url('images/glass.jpeg') 1x, url('images/glass-high.jpeg') 2x);
       background-image: -webkit-image-set(url('images/glass.jpeg') 1x, url('images/glass-high.jpeg') 2x);
-      background-image: image-set(url('images/glass.jpeg') 1x, url('images/glass-high.jpeg') 2x);
-      background-position: center top;
+      background-image: image-set(url('images/glass.jpeg') 1x, url('images/glass-high.jpeg') 2x);*/
+
+      background-position: center 20%;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -ms-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
+    }
 
+    .homepage-overlay {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 20%;
+      min-height: 200px;
+
+      background: rgb(20,20,20);
+      opacity: 0.8;
+    }
+
+    .homepage-title {
+      position: absolute;
+      bottom: 0;
+      z-index: 100;
+      width: 100%;
+      height: 20%;
+      min-height: 200px;
+      padding: 10px;
+
+      color: white;
+      text-align: center;
+    }
+
+    .name {
+      font-size: 50px;
+    }
+
+    .email-link {
+      color: rgb(255,255,255);
+    }
+
+    .white {
+      background: rgb(255,255,255);
+      color: rgb(0,0,0);
+      padding: 30px 10px;
+    }
+
+    .section-credits {
+      background: rgb(237,240,241);
     }
 
     .container {
-      min-height: 100%;
       width: 100%;
+      max-width: 800px;
+      padding: 20px 10px;
+      margin: 20px auto;
+    }
+
+    .credits {
       position: relative;
+      max-width: 1600px;
 
       display: -webkit-box;
       display: -moz-box;
@@ -56,72 +123,17 @@
       -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1;
+
+      -moz-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
     }
 
-    .title {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 200px;
-      line-height: 200px;
-      margin: 0;
-      margin-top: -100px;
-
-      font-weight: normal;
-      text-align: center;
-
-      font-size: 14px;
-    }
-
-    @media screen and (min-width: 240px) { .title { font-size: 18px; } }
-    @media screen and (min-width: 320px) { .title { font-size: 22px; } }
-    @media screen and (min-width: 400px) { .title { font-size: 28px; } }
-    @media screen and (min-width: 500px) { .title { font-size: 36px; } }
-    @media screen and (min-width: 600px) { .title { font-size: 44px; } }
-    @media screen and (min-width: 700px) { .title { font-size: 52px; } }
-    @media screen and (min-width: 1000px) { .title { font-size: 64px; } }
-    @media screen and (min-width: 1200px) { .title { font-size: 72px; } }
-    @media screen and (min-width: 1600px) { .title { font-size: 92px; } }
-    @media screen and (min-width: 1900px) { .title { font-size: 100px; } }
-
-    .title-link {
-      text-decoration: none;
-      background: rgb(255,255,255);
-      background: rgba(255,255,255, 0.5);
-      border-radius: 5px;
-      padding: 10px;
-    }
-
-    @media screen and (min-width: 200px) { .title-link { padding: 20px; } }
-
-    .header {
-      color: rgb(129,129,129);
-
-      -webkit-transition: color 0.25s ease-in;  
-      -moz-transition: color 0.25s ease-in;  
-      -o-transition: color 0.25s ease-in;  
-      transition: color 0.25s ease-in;
-
-      animation: blink 2s;
-      -webkit-animation: blink 2s;
-    }
-
-    .header-at, .header-com { margin: auto 0.5%; }
-
-    .profile {
+    .credits-link {
       display: block;
       text-align: center;
       text-decoration: none;
-
-      background-color: rgb(250,250,250);
-      border-top: 5px solid black;
-      color: rgb(106,106,106);
-
-      font-size: 10px;
-      height: 40px;
-      line-height: 30px;
 
       -webkit-box-flex: 1;
       -moz-box-flex: 1;
@@ -134,182 +146,15 @@
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
-      -webkit-transition: color,background-color,box-shadow 0.25s ease-in;  
-      -moz-transition: color,background-color,box-shadow 0.25s ease-in;  
-      -o-transition: color,background-color,box-shadow 0.25s ease-in;  
-      transition: color,background-color,box-shadow 0.25s ease-in;
-
-
+      line-height: 160px;
+      font-size: 30px;
+      color: rgb(106,106,106);
     }
 
-    @media screen and (min-width: 300px) { .profile { font-size: 14px; height: 60px; line-height: 50px; } }
-    @media screen and (min-width: 400px) { .profile { font-size: 16px; height: 60px; line-height: 50px; } }
-    @media screen and (min-width: 700px) { .profile { font-size: 20px; height: 60px; line-height: 50px; } }
-    @media screen and (min-width: 1000px) { .profile { font-size: 24px; height: 80px; line-height: 70px; } }
-
-    .profile:hover {
-      color: rgb(20,20,20);
-      border-top: 0px;
-      padding-top: 5px;
+    footer {
+      text-align: center;
     }
 
-    .profile-email {
-      border-top: 5px solid rgb(255,60,40);
-    }
-
-    .profile-email:hover {
-      background-color: rgb(255,60,40);
-      color: rgb(255,255,255);
-      box-shadow: inset 0 0 1px rgb(235,40,20);
-    }
-
-    .profile-web {
-      border-top: 5px solid rgb(255,150,0);
-    }
-
-    .profile-web:hover {
-      background-color: rgb(255,150,0);
-      color: rgb(255,255,255);
-      box-shadow: inset 0 0 1px rgb(235,130,0);
-    }
-
-    .profile-twitter {
-      border-top: 5px solid rgb(0,170,235);
-    }
-
-    .profile-twitter:hover {
-      background-color: rgb(0,170,235);
-      color: rgb(255,255,255);
-      box-shadow: inset 0 0 1px rgb(0,150,215);
-    }
-
-    .profile-github {
-      border-top: 5px solid rgb(21,20,20);
-    }
-
-    .profile-github:hover {
-      background-color: rgb(21,20,20);
-      color: rgb(255,255,255);
-      box-shadow: inset 0 0 1px rgb(1,0,0);
-    }
-
-    .profile-linkedin {
-      border-top: 5px solid rgb(20,130,187);
-    }
-
-    .profile-linkedin:hover {
-      background-color: rgb(20,130,187);
-      color: rgb(255,255,255);
-      box-shadow: inset 0 0 1px rgb(0,110,167);
-    }
-
-    .profile-gplus {
-      border-top: 5px solid rgb(220,75,57);
-    }
-
-    .profile-gplus:hover {
-      background-color: rgb(220,75,57);
-      color: rgb(255,255,255);
-      box-shadow: inset 0 0 1px rgb(200,55,37);
-    }
-
-    .profile-slides {
-      border-top: 5px solid rgb(174,144,107);
-    }
-
-    .profile-slides:hover {
-      background-color: rgb(174,144,107);
-      color: rgb(255,255,255);
-      box-shadow: inset 0 0 1px rgb(200,55,37);
-    }
-
-    .title a:hover .header-hello, .title:hover .header-at, .title:hover .header-janantala, .title:hover .header-dot, .title:hover .header-com {
-      color: rgb(21,20,20);
-    }
-
-    .profile-email:hover ~ .title .header-hello, .profile-email:hover ~ .title .header-at, .profile-email:hover ~ .title .header-janantala, .profile-email:hover ~ .title .header-dot, .profile-email:hover ~ .title .header-com {
-      color: rgb(21,20,20);
-    } 
-
-    .link-web:hover ~ .title .header-janantala, .link-web:hover ~ .title .header-dot, .link-web:hover ~ .title .header-com {
-      color: rgb(21,20,20);
-    }
-
-    .profile-twitter:hover ~ .title .header-at, .profile-twitter:hover ~ .title .header-janantala {
-      color: rgb(21,20,20);
-    } 
-
-    .profile-github:hover ~ .title .header-janantala {
-      color: rgb(21,20,20);
-    }
-
-    .profile-linkedin:hover ~ .title .header-janantala {
-      color: rgb(21,20,20);
-    }
-
-    .profile-gplus:hover ~ .title .header-janantala {
-      color: rgb(21,20,20);
-    }
-
-    .profile-slides:hover ~ .title .header-janantala, .profile-slides:hover ~ .title .header-dot, .profile-slides:hover ~ .title .header-com {
-      color: rgb(21,20,20);
-    }
-
-    @keyframes blink {
-      from { color: rgb(21,20,20); }
-      to { color: rgb(129,129,129); }
-    }
-
-    @-webkit-keyframes blink {
-      from { color: rgb(21,20,20); }
-      to { color: rgb(129,129,129); }
-    }
-
-    .link {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 80%;
-      height: -webkit-calc(100% - 40px);
-      height: -moz-calc(100% - 40px);
-      height: calc(100% - 40px);
-    }
-
-    @media screen and (min-width: 300px) { .link { height: -webkit-calc(100% - 60px); height: -moz-calc(100% - 60px); height: calc(100% - 60px); } }
-    @media screen and (min-width: 1000px) { .link { height: -webkit-calc(100% - 80px); height: -moz-calc(100% - 80px); height: calc(100% - 80px); } }
-
-    .license {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      padding: 10px;
-      text-decoration: none;
-      background-color: rgb(255,255,255);
-      color: rgb(129,129,129);
-      font-size: 12px;
-      line-height: 18px;
-      text-align: right;
-    }
-
-    .license a {
-      color: rgb(144, 115, 192);
-      text-decoration: none;
-    }
-
-    .license a:hover {
-      text-decoration: underline;
-    }
-
-
-    @media screen and (min-width: 320px) { .license { font-size: 14px; line-height: 22px; } }
-
-    .profile-text { display: none; }
-    @media screen and (min-width: 1000px) {
-      i.profile-icon { display: none; }
-      .profile-text { display: inline; }
-    }
   </style>
 
   <script src="bower_components/platform/platform.js"></script>
@@ -319,40 +164,73 @@
 </head>
 <body>
 
-<section class="container" itemscope itemtype="http://data-vocabulary.org/Person">
-  <div class="link link-web">
-    <span class="license">
-      Made with <love-heart>love</love-heart> by <a href="http://janantala.com" itemprop="name">Jan Antala</a>
-    </span>
+<section class="homepage-header">
+
+  <div class="homepage-overlay">
+    <!--  -->
   </div>
 
-  <a class="profile profile-email" href="mailto:hello@janantala.com" title="E-mail">
-    <i class="profile-icon fa fa-envelope-o"></i> <span class="profile-text">E-mail</span>
-  </a>
-  <a class="profile profile-twitter" href="http://twitter.com/janantala" title="Twitter" alt="Twitter" itemprop="url">
-    <i class="profile-icon fa fa-twitter"></i> <span class="profile-text">Twitter</span>
-  </a>
-  <a class="profile profile-github" href="http://github.com/janantala" title="GitHub" alt="GitHub" itemprop="url">
-    <i class="profile-icon fa fa-github"></i> <span class="profile-text">GitHub</span>
-  </a>
-  <a class="profile profile-gplus" href="https://plus.google.com/109718894494822810911?rel=author" title="Google+" alt="Google+" itemprop="url">
-    <i class="profile-icon fa fa-google-plus"></i> <span class="profile-text">Google+</span>
-  </a>
-  <a class="profile profile-linkedin" href="http://linkedin.com/in/janantala" title="LinkedIn" alt="LinkedIn" itemprop="url">
-    <i class="profile-icon fa fa-linkedin"></i> <span class="profile-text">LinkedIn</span>
-  </a>
-  <a class="profile profile-slides" href="slides" title="Talk slides" alt="Talk slides" itemprop="url">
-    <i class="profile-icon fa fa-microphone"></i> <span class="profile-text">Talk slides</span>
-  </a>
-  
-  <h1 class="title">
-    <a class="title-link" href="mailto:hello@janantala.com">
-      <span class="header header-hello">hello</span><span class="header header-at">@</span><span class="header header-janantala">janantala</span><span class="header header-dot">.</span><span class="header header-com">com</span>
-    </a>
-  </h1>
-  
+  <section class="homepage-title">
+    <h1 class="name">Jan Antala</h1>
+    <h3 class="title">
+      <span class="title-description">Web Developer</span> | 
+      <a class="email-link" href="mailto:hello@janantala.com">
+        <span class="email email-hello">hello</span><span class="email email-at">@</span><span class="email email-janantala">janantala</span><span class="email email-dot">.</span><span class="email email-com">com</span>
+      </a>
+    </h3>
+  </section>
+
 </section>
 
+<section class="section-about">
+  <div class="container">
+    <p>Hello there!</p>
+    <p>I am a <strong>Web developer</strong> based in Bratislava, Slovakia. I love making things and helping other people make things. I am an <strong>Open Source contributor</strong> and passionate about the Adaptive Web and JavaScript. I like to tweet and talk about it. </p>
+    <p>Drop me a line:</p>
+  </div>
+</section>
+
+<section class="section-credits">
+  <div class="container credits">
+    <a class="credits-link" href="mailto:hello@janantala.com" title="E-mail">
+      E-mail
+    </a>
+    <a class="credits-link" href="http://github.com/janantala" title="GitHub" alt="GitHub">
+      GitHub
+    </a>
+    <a class="credits-link" href="http://twitter.com/janantala" title="Twitter" alt="Twitter">
+      Twitter
+    </a>
+    <a class="credits-link" href="https://plus.google.com/109718894494822810911?rel=author" title="Google+" alt="Google+">
+      Google+
+    </a>
+    <a class="credits-link" href="http://linkedin.com/in/janantala" title="LinkedIn" alt="LinkedIn">
+      LinkedIn
+    </a>
+  </div>
+</section>
+
+<section class="section-work">
+  <div class="container">
+    <h4>Writing</h4>
+    <ul>
+      <li>Beyond Adaptive Web Design</li>
+      <li>Re-Imagining User Interface</li>
+    </ul>
+
+    <h4>Talking</h4>
+    <ul>
+      <li>How To Build An Open-Source AngularJS Module?</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Made with <love-heart>love</love-heart> by <a href="http://janantala.com" itemprop="name">Jan Antala</a>
+</footer>
+
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" media="(max-width: 1000px)" href="bower_components/font-awesome/css/font-awesome.min.css">
 
 <script>
