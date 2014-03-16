@@ -82,20 +82,29 @@
     }
 
     .name {
-      font-size: 30px;
+      font-size: 28px;
     }
 
     .title {
-      font-size: 20px;
+      font-size: 16px;
+    }
+
+    .arrow {
+      font-size: 22px;
+      line-height: 44px;
     }
 
     @media screen and (min-width: 280px) { 
-      .name { font-size: 50px; } 
-      .title { font-size: 26px; } 
-      .homepage-title { height: 20%; min-height: 200px; }
+      .name { font-size: 44px; } 
+      .title { font-size: 22px; } 
+      .homepage-title { min-height: 220px; }
     }
 
-    .email-link {
+    @media screen and (min-width: 450px) { 
+      .homepage-title { min-height: 200px; }
+    }
+
+    .link.link-white {
       color: rgb(255,255,255);
     }
   </style>
@@ -110,15 +119,16 @@
     <h1 class="name" itemprop="name">Jan Antala</h1>
     <h3 class="title">
       <span class="title-description">Front-End Engineer</span> | 
-      <a class="email-link" href="mailto:hello@janantala.com">
+      <a class="link link-white" href="mailto:hello@janantala.com">
         <span class="email email-hello">hello</span><span class="email email-at">@</span><span class="email email-janantala">janantala</span><span class="email email-dot">.</span><span class="email email-com">com</span>
       </a>
     </h3>
+    <a href="#about" class="link link-white arrow"><i class="fa fa-angle-double-down fa-lg"></i></a>
   </section>
 
 </section>
 
-<section class="section-about">
+<section class="section-about" id="about">
   <div class="container">
     <p>Hello there!</p>
     <p itempro="description">
