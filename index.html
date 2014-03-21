@@ -90,8 +90,11 @@
     }
 
     .arrow {
-      font-size: 22px;
-      line-height: 44px;
+      font-size: 18px;
+      line-height: 34px;
+      padding: 10px 14px;
+      background: rgb(18, 21, 24);
+      border-radius: 50px;
 
       -webkit-transition: all 0.1s ease-in;  
       -moz-transition: all 0.1s ease-in;  
@@ -100,13 +103,14 @@
     }
 
     .arrow:hover {
-      font-size: 26px;
+      background: rgb(0,0,0);
     }
 
     @media screen and (min-width: 280px) { 
       .name { font-size: 44px; } 
       .title { font-size: 22px; } 
       .homepage-title { min-height: 220px; }
+      .arrow { font-size: 22px; line-height: 44px; }
     }
 
     @media screen and (min-width: 450px) { 
@@ -138,7 +142,7 @@
         <span class="email email-hello">hello</span><span class="email email-at">@</span><span class="email email-janantala">janantala</span><span class="email email-dot">.</span><span class="email email-com">com</span>
       </a>
     </h3>
-    <a href="#about" class="link link-white arrow"><i class="fa fa-angle-double-down fa-lg"></i></a>
+    <a data-scroll href="#about" class="link link-white arrow"><i class="fa fa-angle-double-down fa-lg"></i></a>
   </section>
 
 </section>
@@ -340,6 +344,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.1.4/polymer.js"></script>
 <link rel="import" href="bower_components/love-heart/love-heart.html">
 
+<script src="bower_components/smooth-scroll/smooth-scroll.js"></script>
+
 <script>
   var isElementInViewport = function(el) {
     var rect = el.getBoundingClientRect();
@@ -362,6 +368,8 @@
   };
 
   window.addEventListener('scroll', listener, false);
+
+  smoothScroll.init();
 </script>
 
 <script>
