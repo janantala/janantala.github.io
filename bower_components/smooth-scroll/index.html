@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Smooth Scroll - A simple vanilla JS script to animate scrolling to anchor links.</title>
+	<title>Smooth Scroll</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- HTML5 Shim for IE -->
@@ -14,8 +14,11 @@
 <body id="top">
 	<section style="width: 88%; max-width: 40em; margin-left: auto; margin-right: auto;">
 
-		<h1 style="text-align: center; font-size: 3em;">Smooth Scroll</h1>
-		<p style="text-align: center; font-size: 1.5em;">A lightweight script to animate scrolling to anchor links.</p>
+		<h1 style="text-align: center; font-size: 3em; margin-bottom: 0;">Smooth Scroll</h1>
+		<p style="text-align: center; font-size: 1.5em; margin: 0;">A lightweight script to animate scrolling to anchor links.</p>
+		<p style="text-align: center;"><a href="https://github.com/cferdinandi/smooth-scroll#readme">Smooth Scroll on GitHub</a></p>
+
+		<br><br>
 
 		<p>
 			<strong>Linear</strong><br>
@@ -41,9 +44,9 @@
 		<p>
 			<strong>Ease-Out</strong><br>
 			<a data-scroll data-options="easing: easeOutQuad" href="#bazinga">Quad</a><br>
-			<a data-scroll data-options="easing: easeOutCubic"href="#bazinga">Cubic</a><br>
-			<a data-scroll data-options="easing: easeOutQuart"href="#bazinga">Quart</a><br>
-			<a data-scroll data-options="easing: easeOutQuint"href="#bazinga">Quint</a>
+			<a data-scroll data-options="easing: easeOutCubic" href="#bazinga">Cubic</a><br>
+			<a data-scroll data-options="easing: easeOutQuart" href="#bazinga">Quart</a><br>
+			<a data-scroll data-options="easing: easeOutQuint" href="#bazinga">Quint</a>
 		</p>
 
 		<p>
@@ -69,8 +72,9 @@
 	<script src='smooth-scroll.js'></script>
 	<script>
 		smoothScroll.init({
-			speed: 500,
+			speed: 1000,
 			easing: 'easeInOutCubic',
+			offset: 0,
 			updateURL: false,
 			callbackBefore: function ( toggle, anchor ) {},
 			callbackAfter: function ( toggle, anchor ) {}
