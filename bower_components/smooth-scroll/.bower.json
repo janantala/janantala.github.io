@@ -1,10 +1,12 @@
 {
   "name": "smooth-scroll",
   "_cacheHeaders": {
-    "Content-Length": "7389",
+    "ETag": "\"1b86aff6db898d2302f64fb0f94d0a6cde9fbd36\"",
+    "Content-Length": "7678",
     "Content-Type": "application/zip",
     "Content-Disposition": "attachment; filename=smooth-scroll-master.zip"
   },
+  "_release": "e-tag:1b86aff6d",
   "_source": "https://github.com/cferdinandi/smooth-scroll/archive/master.zip",
   "_target": "*",
   "_originalSource": "https://github.com/cferdinandi/smooth-scroll/archive/master.zip"

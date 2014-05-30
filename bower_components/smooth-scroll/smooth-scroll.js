@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Smooth Scroll v4.4
+	Smooth Scroll v4.5
 	Animate scrolling to anchor links, by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -21,6 +21,7 @@ window.smoothScroll = (function (window, document, undefined) {
 	var _defaults = {
 		speed: 500,
 		easing: 'easeInOutCubic',
+		offset: 0,
 		updateURL: false,
 		callbackBefore: function () {},
 		callbackAfter: function () {}
@@ -58,7 +59,7 @@ window.smoothScroll = (function (window, document, undefined) {
 	// Calculate how far to scroll
 	// Private method
 	// Returns an integer
-	var _getEndLocation = function ( anchor, headerHeight ) {
+	var _getEndLocation = function ( anchor, headerHeight, offset ) {
 		var location = 0;
 		if (anchor.offsetParent) {
 			do {
@@ -66,12 +67,23 @@ window.smoothScroll = (function (window, document, undefined) {
 				anchor = anchor.offsetParent;
 			} while (anchor);
 		}
-		location = location - headerHeight;
+		location = location - headerHeight - offset;
 		if ( location >= 0 ) {
 			return location;
 		} else {
 			return 0;
 		}
+	};
+
+	// Determine the document's height
+	// Private method
+	// Returns an integer
+	var _getDocumentHeight = function () {
+		return Math.max(
+			document.body.scrollHeight, document.documentElement.scrollHeight,
+			document.body.offsetHeight, document.documentElement.offsetHeight,
+			document.body.clientHeight, document.documentElement.clientHeight
+		);
 	};
 
 	// Convert data-options attribute into an object of key/value pairs
@@ -116,17 +128,19 @@ window.smoothScroll = (function (window, document, undefined) {
 		// Options and overrides
 		options = _mergeObjects( _defaults, options || {} ); // Merge user options with defaults
 		var overrides = _getDataOptions( toggle ? toggle.getAttribute('data-options') : null );
-		var speed = overrides.speed || options.speed;
+		var speed = parseInt(overrides.speed || options.speed, 10);
 		var easing = overrides.easing || options.easing;
+		var offset = parseInt(overrides.offset || options.offset, 10);
 		var updateURL = overrides.updateURL || options.updateURL;
 
 		// Selectors and variables
 		var fixedHeader = document.querySelector('[data-scroll-header]'); // Get the fixed header
 		var headerHeight = fixedHeader === null ? 0 : (fixedHeader.offsetHeight + fixedHeader.offsetTop); // Get the height of a fixed header if one exists
 		var startLocation = window.pageYOffset; // Current location on the page
-		var endLocation = _getEndLocation( document.querySelector(anchor), headerHeight ); // Scroll to location
+		var endLocation = _getEndLocation( document.querySelector(anchor), headerHeight, offset ); // Scroll to location
 		var animationInterval; // interval timer
 		var distance = endLocation - startLocation; // distance to travel
+		var documentHeight = _getDocumentHeight();
 		var timeLapsed = 0;
 		var percentage, position;
 
@@ -143,7 +157,7 @@ window.smoothScroll = (function (window, document, undefined) {
 		// Runs functions
 		var _stopAnimateScroll = function (position, endLocation, animationInterval) {
 			var currentLocation = window.pageYOffset;
-			if ( position == endLocation || currentLocation == endLocation || ( (window.innerHeight + currentLocation) >= document.body.scrollHeight ) ) {
+			if ( position == endLocation || currentLocation == endLocation || ( (window.innerHeight + currentLocation) >= documentHeight ) ) {
 				clearInterval(animationInterval);
 				options.callbackAfter( toggle, anchor ); // Run callbacks after animation complete
 			}

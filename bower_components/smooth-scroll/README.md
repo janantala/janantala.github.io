@@ -1,5 +1,7 @@
 # Smooth Scroll
-A lightweight script to animate scrolling to anchor links. [View the demo](http://cferdinandi.github.io/smooth-scroll/).
+A lightweight script to animate scrolling to anchor links.
+
+[Download Smooth Scroll 4](https://github.com/cferdinandi/smooth-scroll/archive/master.zip) / [View the demo](http://cferdinandi.github.io/smooth-scroll/)
 
 **In This Documentation**
 
@@ -54,9 +56,10 @@ You can pass options and callbacks into Smooth Scroll through the `init()` funct
 
 ```javascript
 smoothScroll.init({
-	speed: 500, // How fast to complete the scroll in milliseconds
+	speed: 500, // Integer. How fast to complete the scroll in milliseconds
 	easing: 'easeInOutCubic', // Easing pattern to use
 	updateURL: false, // Boolean. Whether or not to update the URL with the anchor hash on scroll
+	offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
 	callbackBefore: function ( toggle, anchor ) {}, // Function to run before scrolling
 	callbackAfter: function ( toggle, anchor ) {} // Function to run after scrolling
 });
@@ -107,6 +110,7 @@ Smooth Scroll also lets you override global settings on a link-by-link basis usi
 <a data-scroll
    data-options="speed: 500;
                  easing: easeInOutCubic;
+                 offset: 0;
                  updateURL: false"
 >
 	Anchor Link
@@ -168,6 +172,7 @@ Smooth Scroll is built with modern JavaScript APIs, and uses progressive enhance
 * Infinite loop bugs in iOS and Chrome (when zoomed) by [Alex Guzman](https://github.com/alexguzman).
 * IE10 rounding error fixed by [Luke Siedle](https://github.com/luke-siedle).
 * Enhanced callback functions by [Constant Meiring](https://github.com/constantm).
+* Scroll-to-top bug for links at the bottom of the page by [Jonas Havers](https://github.com/JonasHavers).
 
 
 
@@ -183,6 +188,10 @@ Smooth Scroll is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 
 ## Changelog
+* v4.6 - March 21, 2014
+	* [Fixed scroll-to-top bug for links at the bottom of the page](https://github.com/cferdinandi/smooth-scroll/issues/49).
+* v4.5 - March 20, 2014
+	* Added `offset` to `options`
 * v4.4 - March 15, 2014
 	* [Fixed iOS scroll-to-top bug](https://github.com/cferdinandi/smooth-scroll/issues/45).
 * v4.3 - March 5, 2014
